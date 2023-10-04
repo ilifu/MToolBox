@@ -36,7 +36,7 @@ Help options:
 	echo "$USAGE"
 }
 
-gsnap_gmap_version=2015-12-31.v7
+gsnap_gmap_version=2023-07-20
 anaconda_version=2-2.5.0
 anaconda_file=Anaconda$anaconda_version-Linux-x86_64.sh
 muscle_file=muscle3.8.31_i86linux64
@@ -172,9 +172,9 @@ gsnap_install() {
     fi
 	tar xvzf $gsnap_gmap_file &&
 	rm $gsnap_gmap_file
-	cd gmap*
+	cd gmap-${gsnap_gmap_version}
 	./configure --prefix=$MTOOLBOX_BIN/gmap
-	make
+	make -j{$( nproc -all )}
 	make install
 	echo "Installing gmap $gsnap_gmap_version... Done."
 	popd
