@@ -118,8 +118,7 @@ samtools_install()
 	echo "Installing Samtools $samtools_version"
 	samtools_version=$samtools_version
 	samtools_file=samtools-${samtools_version}.tar.bz2
-	#samtools_url=https://github.com/samtools/samtools/releases/download/1.3/$samtools_file
-	samtools_url=https://kent.dl.sourceforge.net/project/samtools/samtools/1.3/$samtools_file
+	samtools_url=https://github.com/samtools/samtools/releases/download/1.3/$samtools_file
 	pushd .
 	cd bin
 	if [ "$opsys" == "osx" ]; then
