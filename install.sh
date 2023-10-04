@@ -139,7 +139,7 @@ zlib_install() {
 	echo "Installing zlib $zlib_version ..."
 	zlib_version=$zlib_version
 	zlib_file=zlib-${zlib_version}.tar.gz
-	zlib_url=http://zlib.net/$zlib_file
+	zlib_url=https://zlib.net/fossils/$zlib_file
 	pushd .
 	cd bin
 	if [ "$opsys" == "osx" ]; then
